@@ -1,6 +1,31 @@
 @Library_Api_HostAddress = http://localhost:5090
 
-GET {{Library_Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Get all books
+GET http://localhost:5090/api/Book
 
-###
+### Get a book by ID
+GET http://localhost:5090/api/Book/1
+
+### Create a new book
+POST http://localhost:5090/api/Book
+Content-Type: application/json
+
+{
+  "title": "Test Book",
+  "author": "Author Name",
+  "copiesAvailable": 5
+}
+
+### Update a book
+PUT http://localhost:5090/api/Book/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Updated Title",
+  "author": "Updated Author",
+  "copiesAvailable": 10
+}
+
+### Delete a book
+DELETE http://localhost:5090/api/Book/1
