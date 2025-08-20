@@ -4,8 +4,10 @@ simple api for learning purpouses.
 
 --- 
 
+## Features _(right now)_
+- Books CRUD
+- Users CRUD
+
 ## Features _(to be)_
-- View list of books
-- Add new books
-- Basic CRUD operations
-- SQLite database for persistence
+- Loaning system
+- auth (if i am not lazy)
