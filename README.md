@@ -24,7 +24,7 @@ A simple ASP.NET Core Web API for managing library users, books, and loans.
 1. Clone the repository
 2. Restore dependencies: `dotnet restore`
 3. Run the project: `dotnet run`
-4. API available at `https://localhost:5001/api/`
+4. API available at `https://localhost:5090/api/`  
 **Disclaimer**
 This project is intended as a starter project for learning ASP.NET Core and Entity Framework Core.
 It does not implement all recommended best practices (advanced validation, testing, security and such). Use it as a foundation to build and improve upon.
