@@ -58,3 +58,69 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE http://localhost:5090/api/User/1
+
+
+
+
+### Create a new book
+POST http://localhost:5090/api/Book
+Content-Type: application/json
+
+{
+  "title": "Loan Test Book",
+  "author": "Loan Author",
+  "copiesAvailable": 2
+}
+
+### Create a new user
+POST http://localhost:5090/api/User
+Content-Type: application/json
+
+{
+  "name": "Loan Test User",
+  "email": "loantestuser@example.com"
+}
+
+### Get all books (find the created book's ID)
+GET http://localhost:5090/api/Book
+
+### Get all users (find the created user's ID)
+GET http://localhost:5090/api/User
+
+### Create a new loan (replace bookId and userId with actual IDs from above)
+POST http://localhost:5090/api/Loan
+Content-Type: application/json
+
+{
+  "bookId": 2,
+  "userId": 2,
+  "loanDate": "2024-06-01T00:00:00Z",
+  "returnDate": null
+}
+
+### Get all loans
+GET http://localhost:5090/api/Loan
+
+### Get the created loan by ID (replace with actual loan ID)
+GET http://localhost:5090/api/Loan/1
+
+### Update the loan (e.g., set returnDate)
+PUT http://localhost:5090/api/Loan/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "bookId": 1,
+  "userId": 1,
+  "loanDate": "2024-06-01T00:00:00Z",
+  "returnDate": "2024-06-10T00:00:00Z"
+}
+
+### Get the updated loan
+GET http://localhost:5090/api/Loan/1
+
+### Delete the loan
+DELETE http://localhost:5090/api/Loan/1
+
+### Try to get the deleted loan (should return 404)
+GET http://localhost:5090/api/Loan/1
